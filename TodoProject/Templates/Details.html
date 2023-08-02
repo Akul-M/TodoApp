@@ -1,0 +1,15 @@
+{% extends 'Base.html' %}
+{% block body %}
+
+<div class="card p-2 mb-3 shadow">
+    <div class="card-body">
+        <h4 class="card-title">{{data.taskName}}</h4>
+        <h3>{{data.priority}}</h3>
+        <h4 class="mb-4">{{data.date}}</h4>
+        <a href="{% url 'TodoApp:delete' data.id %}" class="btn btn-warning">Completed</a>
+        <a href="{% url 'TodoApp:update' data.id %}" class="btn btn-primary">Update</a>
+    </div>
+</div>
+
+
+{% endblock %}
